@@ -33,26 +33,47 @@
 # reverse_list(list)
 # print(list)
 
-my_list     = [3, 4, 6, 10, 11, 15]
-alices_list = [1, 5, 8, 12, 14, 19]
+# my_list     = [3, 4, 6, 10, 11, 15]
+# alices_list = [1, 5, 8, 12, 14, 19]
 
-def merge_lists(list1, list2):
-  merged_list = [None] * (len(list1) + len(list2))
-  idx1 = 0
-  idx2 = 0
-  merged_idx = 0
-  while merged_idx < len(merged_list):
-    list1_exhausted = idx1 >= len(list1)
-    list2_exhausted = idx2 >= len(list2)
-    if (not list1_exhausted and (list2_exhausted or list1[idx1] < list2[idx2])):
-      merged_list[merged_idx] = list1[idx1]
-      idx1 += 1
-    else:
-      merged_list[merged_idx] = list2[idx2]
-      idx2 += 1
-    merged_idx += 1
+# def merge_lists(list1, list2):
+#   merged_list = [None] * (len(list1) + len(list2))
+#   idx1 = 0
+#   idx2 = 0
+#   merged_idx = 0
+#   while merged_idx < len(merged_list):
+#     list1_exhausted = idx1 >= len(list1)
+#     list2_exhausted = idx2 >= len(list2)
+#     if (not list1_exhausted and (list2_exhausted or list1[idx1] < list2[idx2])):
+#       merged_list[merged_idx] = list1[idx1]
+#       idx1 += 1
+#     else:
+#       merged_list[merged_idx] = list2[idx2]
+#       idx2 += 1
+#     merged_idx += 1
   
-  return merged_list
+#   return merged_list
 
-# Prints [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
-print (merge_lists(my_list, alices_list))
+# # Prints [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
+# print (merge_lists(my_list, alices_list))
+
+
+# Take_Out_Orders = [17, 8, 24]
+# Dine_In_Orders = [12, 19, 2]
+# Served_Orders = [17, 8, 12, 19, 24, 2]
+
+# def order_check(take_out_orders, dine_in_orders, served_orders):
+#   if len(served_orders) == 0:
+#     return True
+
+#   if len(take_out_orders) and take_out_orders[0] == served_orders[0]:
+#     return order_check(take_out_orders[1:], dine_in_orders, served_orders[1:])
+
+#   elif len(dine_in_orders) and dine_in_orders[0] == served_orders[0]:
+#     return order_check(take_out_orders, dine_in_orders[1:], served_orders[1:])
+
+#   else:
+#     return False
+  
+# print(order_check(Take_Out_Orders, Dine_In_Orders, Served_Orders))
+
