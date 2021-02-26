@@ -77,3 +77,18 @@
   
 # print(order_check(Take_Out_Orders, Dine_In_Orders, Served_Orders))
 
+flight_length = 230
+movie_lengths = [90, 80, 120, 120, 100, 160]
+
+def in_flight_movie(flight_length, movie_lengths):
+  for movie in movie_lengths:
+    length_checker = flight_length - movie
+    print(length_checker)
+    for item in range(1, len(movie_lengths)):
+
+      if movie_lengths[item] == length_checker:
+        return True
+
+  return False
+
+print(in_flight_movie(flight_length, movie_lengths))
